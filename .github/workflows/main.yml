@@ -60,3 +60,12 @@ jobs:
             build/*.exe
             build/*.bin
             build/*.app/**/*
+
+      - name: Upload Release Asset
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          files: |
+            build/*.exe
+            build/*.bin
+            build/*.app/**/*
