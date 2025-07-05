@@ -25,6 +25,7 @@ jobs:
         # In particular, macos 14+ will build for arm only.
         # os: [macos-12, ubuntu-20.04, windows-2019]
         os: [windows-latest]
+        python: [3.9, 3.13]
 
     runs-on: ${{ matrix.os }}
 
@@ -32,10 +33,10 @@ jobs:
       - name: Check-out repository
         uses: actions/checkout@v4
 
-      - name: Set up Python ${{ env.PYTHON_VERSION }}
+      - name: Set up Python ${{ matrix.python }}
         uses: actions/setup-python@v5
         with:
-          python-version: ${{ env.PYTHON_VERSION }}
+          python-version: ${{ matrix.python }}
           cache: 'pip' # caching pip dependencies
 
       # Install using pip / poetry-core backend via PEP 517
