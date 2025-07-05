@@ -3,6 +3,10 @@ on:
     tags:
       - release.**
 
+permissions:              # 🌟 NEW
+  contents: write         # release creation / update needs this
+  # discussions: write    # (only if you enable discussions on releases)
+  
 env:
   PYTHON_VERSION: "3.9"
   POETRY_VERSION: "1.8.1"
