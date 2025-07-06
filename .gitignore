@@ -1,1 +1,33 @@
-build
+# Build and distribution
+build/
+dist/
+*.egg-info/
+*.spec
+
+# Python cache
+**/__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.env/
+.venv/
+env/
+venv/
+
+# Poetry
+poetry.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Nuitka output
+*.bin
+*.exe
+
+# Logs
+*.log
+
+# VSCode settings
+.vscode/
