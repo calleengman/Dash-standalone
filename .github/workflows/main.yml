@@ -8,8 +8,8 @@ permissions:              # 🌟 NEW
   # discussions: write    # (only if you enable discussions on releases)
   
 env:
-  # PYTHON_VERSION: "3.9"
-  POETRY_VERSION: "1.8.1"
+  PYTHON_VERSION: "3.13"
+  POETRY_VERSION: "2.1.3"
   POETRY_URL: https://install.python-poetry.org
   NUITKA_CACHE_DIR: ~/.nuitka/cache
 
@@ -25,7 +25,7 @@ jobs:
         # In particular, macos 14+ will build for arm only.
         # os: [macos-12, ubuntu-20.04, windows-2019]
         os: [windows-latest]
-        python: [3.9, 3.13]
+        python: [3.13]
 
     runs-on: ${{ matrix.os }}
 
